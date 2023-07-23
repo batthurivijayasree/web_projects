@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education Institute Landing Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #eadcdc;
+      padding: 100px;
+      text-align: center;
+    }
+    .hero {
+      background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fgithub.com%2Ftopics%2Feducation-website&psig=AOvVaw3bGresZZddHE8RctPiYtHT&ust=1690204459607000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOCozrD1pIADFQAAAAAdAAAAABAE');
+      background-size: cover;
+      background-position: center;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      color: #0b0909;
+    }
+    .contact-form {
+      padding: 20px;
+      text-align: center;
+    }
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .contact-form button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Education Institute</h1>
+  </header>
+  <section class="hero">
+    <h1>Welcome to our Institution</h1>
+  </section>
+  <section class="contact-form">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <script>
+    // Function to handle form submission
+    const submitForm = (event) => {
+      event.preventDefault();
+      const form = event.target;
+      const formData = new FormData(form);
+      
+      // You can perform any additional actions here, such as sending the form data to a server using fetch or AJAX.
+      
+      // For demonstration purposes, let's just log the form data.
+      console.log("Form Data:", Object.fromEntries(formData));
+      
+      // Reset the form
+      form.reset();
+    };
+    
+    // Attach form submission handler to the contact form
+    document.getElementById("contactForm").addEventListener("submit", submitForm);
+  </script>
+</body>
+</html>
